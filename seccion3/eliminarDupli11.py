@@ -6,4 +6,5 @@ def duplicados(arr):
                 res.append(arr[i])
     return res
 
-print(duplicados([1,1,1,1,1,1,2,3,4,5]))
+
+print(duplicados([1, 1, 1, 1, 1, 1, 2, 3, 4, 5]))

@@ -1,10 +1,10 @@
 def invertir_aux(arr, i, s):
     if i >= s:
         return arr
-    
-    arr[i] ^= arr[s]
-    arr[s] ^= arr[i]
-    arr[i] ^= arr[s]
+
+    temp = arr[i]
+    arr[i] = arr[s]
+    arr[s] = temp
 
     return invertir_aux(arr, i+1, s-1)
 
