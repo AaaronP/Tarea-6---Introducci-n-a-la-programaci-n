@@ -1,6 +1,5 @@
 def findSublist(arr, i, j):
-    sublists = []
-    for k in range(i, j):
-        if type(arr[k]) == list:
-            sublists.append(arr[k])
-    return sublists
+    res = []
+    for k in range(i,j+1):
+        res.append(arr[k])
+    return res
