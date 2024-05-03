@@ -15,11 +15,13 @@ def es_primo(n):
 
 # i: [1, n]
 def primeros_primos(n):
-    i = 1
+    i = 0
+    a = 0
     res = []
 
-    while i <= n:
+    while a < n:
         if es_primo(i):
             res.append(i)
+            a += 1
         i += 1
     return res
