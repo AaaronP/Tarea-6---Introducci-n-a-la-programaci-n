@@ -11,7 +11,7 @@ def sum_aux(v, w, i, n, res):
 
 
 def sqrt2_aux(i, s, n, p):
-    m = (i + s) // 2
+    m = (i + s) / 2
 
     if m * m - p < n and m * m + p > n:
         return m
