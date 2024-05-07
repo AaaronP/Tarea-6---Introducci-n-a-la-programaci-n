@@ -1,28 +1,15 @@
-def grados(v, g):
-    mag_v = (v[0] * v[0] + v[1] * v[1]) ** 0.5
+import math
 
-    theta = g * (3.141592653589793 / 180)
 
-    x_w = mag_v * cos(theta)
-    y_w = mag_v * sin(theta)
+def vector(v, g):
+    x, y = v
+    magnitud = math.sqrt(x * x + y * y)
+    angulo = math.radians(g)
 
-    w = (x_w, y_w)
-
+    i = magnitud * math.cos(angulo)
+    j = magnitud * math.sin(angulo)
+    w = (i, j)
     return w
 
 
-def sin(theta):
-    return theta - (theta**3) / 6 + (theta**5) / 120 - (theta**7) / 5040
-
-
-def cos(theta):
-    return 1 - (theta**2) / 2 + (theta**4) / 24 - (theta**6) / 720
-
-
-v = (3, 4) 
-g = 30
-w = grados(v, g)
-
-print("Vector v:", v)
-print("Ángulo entre v y w:", g, "grados")
-print("Vector w:", w)
+print(vector((2, 3), 45))
